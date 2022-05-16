@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Home – GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+{% block content %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "policy-search"
+}) }}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+      
+      {% from "key-details-bar/macro.njk" import dwpKeyDetailsBar %}
+      {{ dwpKeyDetailsBar({
+        primaryIdentifier: {
+        text: 'Risk score',
+        value: 'Rating:'
+        },
+        secondaryIdentifier: {
+        text: 'Risk rating:',
+        value: '1 - Very high'
+        },
+        additionalData: [
+        {
+        value: data['country'],
+        text: "Country:"
+        },
+        {
+        value: data['host'],
+        text: "Host:"
+        },
+        {
+        value: data['format'],
+        text: "Format:"
+        }
+        ]
+        }) }} 
+    
+  </div>
+</div>
+
+{% endblock %}

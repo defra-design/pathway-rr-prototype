@@ -1,0 +1,115 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Home – GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+{% block content %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "user-type"
+}) }}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">Policy Search</h1>
+    <form action="policy-calculate" method="post" class="form">
+          {{ govukSelect({
+          id: "country",
+          name: "country",
+          label: {
+            text: "Country"
+          },
+          items: [
+            {
+              value: "Africa",
+              text: "Africa",
+              selected: true
+            },
+            {
+              value: "Bermuda",
+              text: "Bermuda"
+            },
+            {
+              value: "Czech republic",
+              text: "Czech Republic"
+            },
+            {
+              value: "Denmark",
+              text: "Denmark"
+            }
+          ]
+        }) }}
+        
+        {{ govukSelect({
+          id: "host",
+          name: "host",
+          label: {
+            text: "Host"
+          },
+          items: [
+            {
+              value: "Abies chensiensis",
+              text: "Abies chensiensis",
+              selected: true
+            },
+            {
+              value: "Corchorus",
+              text: "Corchorus"
+            },
+            {
+              value: "Hypocyrta",
+              text: "Hypocyrta"
+            },
+            {
+              value: "Musa",
+              text: "Musa"
+            }
+          ]
+        }) }}
+        
+        {{ govukSelect({
+          id: "format",
+          name: "format",
+          label: {
+            text: "Format"
+          },
+          items: [
+            {
+              value: "Plants for planting",
+              text: "Plants for planting"
+            },
+            {
+              value: " ",
+              text: " "
+            },
+            {
+              value: " ",
+              text: " "
+            },
+            {
+              value: " ",
+              text: " "
+            }
+          ]
+        }) }}
+        
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}

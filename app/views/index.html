@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Pathway Risk Register
+{% endblock %}
+
+{% block content %}
+
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Pathway Risk Register Prototype
+    </h1>
+    
+    
+
+    <div class="moj-timeline">
+      <div class="moj-timeline__item">
+
+        <div class="moj-timeline__header">
+          <h2 class="moj-timeline__title">Current Version: </h2>
+
+          <p class="moj-timeline__byline">Sprint 3</p>
+
+        </div>
+
+        <p class="moj-timeline__date">
+          <time datetime="2019-06-14T14:01:00.000Z">11 May - 25 May 2022</time>
+        </p>
+
+        <div class="moj-timeline__description">
+          <p>Some contextual info on Sprint and changes to prototype here...</p>
+          <a class="govuk-link" href="/v1-1/user-type">Launch Prototype</a>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+{% endblock %}
