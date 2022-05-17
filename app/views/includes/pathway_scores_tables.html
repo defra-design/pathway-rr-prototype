@@ -1,0 +1,46 @@
+<!-- Set variable for csv -->
+{% set csv_egypt_tuber_bulbstubers = "Pest,Establishment,Impact,Establishment * Impact,Establishment,Impact,Establishment * Impact
+Aphis spiraecola,4,2,8,4,2,8
+Bagrada hilaris,3,3,9,3,3,9
+Beet curly top virus,5,4,20,5,4,20
+Beet necrotic yellow vein benyvirus,,3,0,,3,0
+Chrysodeixis chalcites,0,3,0,0,3,0
+Globodera rostochiensis Non-European Strains,5,4,20,5,4,20
+Helicotylenchus dihystera,5,3,15,5,3,15
+Helicoverpa armigera,5,2,10,5,2,10
+Leveillula taurica,,3,0,,3,0
+Liriomyza sativae,5,5,25,3,3,9
+Liriomyza trifolii,5,3,15,3,3,9
+Meloidogyne arenaria,5,3,15,5,3,15
+Meloidogyne hapla,,,0,,,0
+Meloidogyne javanica,5,3,15,5,3,15
+Naupactus cervinus,5,2,10,5,2,10
+Ostrinia nubilalis,,3,0,,3,0
+Paratrichodorus minor,5,2,10,4,2,8
+Phenacoccus parvus,3,2,6,3,2,6
+Phenacoccus solani,5,3,15,4,3,12
+Phenacoccus solenopsis,5,3,15,4,3,12
+Phytophthora citrophthora,,,0,,,0
+Phytophthora infestans,,5,0,,5,0
+Potato spindle tuber viroid,5,3,15,3,3,9
+Potato virus M (non-European strains),5,3,15,5,3,15
+Potato virus S (non-European strains),5,3,15,5,3,15
+Potato virus X (non-European strains),5,2,10,5,2,10
+Potato virus Y (non-European strains),5,3,15,5,3,15
+Pratylenchus brachyurus,2,1,2,2,1,2
+Pratylenchus scribneri,4,2,8,4,2,8
+Ralstonia solanacearum,,5,0,,3,0
+Rhopalosiphum rufiabdominale,3,3,9,3,3,9
+Spodoptera littoralis,5,3,15,4,3,12
+Spongospora subterranea,,,0,,,0
+Tomato chlorosis virus,5,3,15,4,3,12
+Tomato ringspot virus,,2,0,,2,0
+Tomato spotted wilt virus,,3,0,,3,0
+Tomato yellow leaf curl virus,5,4,20,2,4,8
+Trialeurodes ricini,4,3,12,4,3,12
+Tuta absoluta,0,3,0,0,3,0" %}
+
+<!-- Pass variable into csvToArray Function -->
+{{ csv_egypt_tuber_bulbstubers | csvToArray | log }}
+
+{{ data | log }}

@@ -21,6 +21,7 @@ Home – GOV.UK Prototype Kit
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Pathway Risk rating</h1>
       
       {% from "key-details-bar/macro.njk" import dwpKeyDetailsBar %}
       {{ dwpKeyDetailsBar({
@@ -48,6 +49,20 @@ Home – GOV.UK Prototype Kit
         ]
         }) }} 
     
+        {% include "includes/pathway_scores_tables.html" %}
+        <h3 class="govuk-heading-m govuk-!-margin-top-4">Table will appear here...</h3>
+        
+        <div class="govuk-button-group">
+          {{ govukButton({
+            text: "Save and continue"
+          }) }}
+        
+          {{ govukButton({
+            text: "Save as draft",
+            classes: "govuk-button--secondary"
+          }) }}
+        </div>
+        
   </div>
 </div>
 
