@@ -40,6 +40,12 @@ Tomato yellow leaf curl virus,5,4,20,2,4,8
 Trialeurodes ricini,4,3,12,4,3,12
 Tuta absoluta,0,3,0,0,3,0" %}
 
+{% set csv_southAfrica_grapes = " " %}
+
+{% set csv_france_pines = " " %}
+
+{% set csv_india_roses = " " %}
+
 <!-- Pass variable into csvToArray Function -->
 {{ csv_egypt_tuber_bulbstubers | csvToArray | log }}
 
