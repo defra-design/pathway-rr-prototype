@@ -24,7 +24,7 @@ Home – GOV.UK Prototype Kit
 
     <h1 class="govuk-heading-l">Policy Pathway Search</h1>
     <form action="policy-calculate" method="post" class="form">
-          {{ govukSelect({
+      {{ govukSelect({
           id: "country",
           name: "country",
           label: {
@@ -32,9 +32,13 @@ Home – GOV.UK Prototype Kit
           },
           items: [
             {
-              value: "Egypt",
-              text: "Egypt",
+              value: "Choose country",
+              text: "Choose country",
               selected: true
+            },
+            {
+              value: "Egypt",
+              text: "Egypt"
             },
             {
               value: "France",
@@ -50,8 +54,8 @@ Home – GOV.UK Prototype Kit
             }
           ]
         }) }}
-        
-        {{ govukSelect({
+
+      {{ govukSelect({
           id: "host",
           name: "host",
           label: {
@@ -59,9 +63,13 @@ Home – GOV.UK Prototype Kit
           },
           items: [
             {
-              value: "Rosa",
-              text: "Rosa",
+              value: "Choose host",
+              text: "Choose host",
               selected: true
+            },
+            {
+              value: "Rosa",
+              text: "Rosa"
             },
             {
               value: "Pinus",
@@ -77,14 +85,19 @@ Home – GOV.UK Prototype Kit
             }
           ]
         }) }}
-        
-        {{ govukSelect({
+
+      {{ govukSelect({
           id: "format",
           name: "format",
           label: {
             text: "Format"
           },
           items: [
+            {
+              value: "Choose format",
+              text: "Choose format",
+              selected: true
+            },
             {
               value: "Bulbs or tubers",
               text: "Bulbs or tubers"
@@ -103,8 +116,8 @@ Home – GOV.UK Prototype Kit
             }
           ]
         }) }}
-        
-        {{ govukButton({
+
+      {{ govukButton({
           text: "Continue"
         }) }}
 

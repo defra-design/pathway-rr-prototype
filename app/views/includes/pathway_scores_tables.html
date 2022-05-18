@@ -40,13 +40,109 @@ Tomato yellow leaf curl virus,5,4,20,2,4,8
 Trialeurodes ricini,4,3,12,4,3,12
 Tuta absoluta,0,3,0,0,3,0" %}
 
-{% set csv_southAfrica_grapes = " " %}
+{% set csv_southAfrica_grapes_fruitAndVegetables = "Pest,Establishment,Impact,Establishment * Impact,Establishment,Impact,Establishment * Impact
+Agrobacterium tumefaciens,,,0,,,0
+Aleurocanthus spiniferus,3,2,6,3,2,6
+Aleurocanthus woglumi,0,0,0,0,0,0
+Aonidiella orientalis,4,2,8,4,2,8
+Arabis mosaic virus,,3,0,,3,0
+Armillaria mellea,,,0,,,0
+Bactrocera dorsalis species complex,0,0,0,0,0,0
+Calepitrimerus vitis,4,2,8,4,2,8
+Ceratitis rosa,0,0,0,0,0,0
+Daktulosphaira vitifoliae,,4,0,,4,0
+Frankliniella occidentalis,,4,0,,3,0
+Grapevine Syrah virus 1,5,1,5,5,1,5
+Grapevine fanleaf virus,,2,0,,2,0
+Helicotylenchus dihystera,5,3,15,5,3,15
+Heteronychus arator,4,3,12,4,3,12
+Hop stunt viroid,5,4,20,4,4,16
+Longidorus elongatus,,,0,,,0
+Margarodes prieskaensis,3,4,12,3,4,12
+Margarodes vredendalensis,3,4,12,3,4,12
+Meloidogyne arenaria,5,3,15,5,3,15
+Meloidogyne ethiopica,5,3,15,5,3,15
+Meloidogyne hapla,,,0,,,0
+Parasaissetia nigra,,3,0,,3,0
+Phaeoacremonium viticola,5,2,10,5,2,10
+Phenacoccus solani,5,3,15,4,3,12
+Phlyctinus callosus,5,3,15,5,3,15
+Pseudaonidia trilobitiformis,3,2,6,3,2,6
+Raspberry bushy dwarf virus,,,0,,,0
+Scutellonema brachyurus,5,2,10,5,2,10
+Spodoptera littoralis,5,3,15,4,3,12
+Thaumatotibia leucotreta,3,3,9,3,3,9
+Tylenchulus semipenetrans,2,3,6,2,3,6
+Xiphinema diversicaudatum,,3,0,,3,0
+Xiphinema index,5,3,15,5,3,15
+Xiphinema insigne,3,2,6,3,2,6
+Xiphinema pachtaicum,5,3,15,5,3,15
+Xylophilus ampelinus,2,4,8,2,4,8
+Zaprionus indianus,4,1,4,4,1,4" %}
 
 {% set csv_france_pines = " " %}
 
 {% set csv_india_roses = " " %}
 
-<!-- Pass variable into csvToArray Function -->
 {{ csv_egypt_tuber_bulbstubers | csvToArray | log }}
 
+
 {{ data | log }}
+
+
+
+
+{% set csv_selected = "" %}
+
+{% if data["country"] == "Egypt" and data["format"] == "Bulbs or tubers" and data["host"] == "Solanum tuberosum" %}
+  {% set csv_selected = csv_egypt_tuber_bulbstubers %}
+{% endif %}
+
+{% if data["country"] == "France" and data["format"] == "Fruits or vegetables" and data["host"] == "Pinus" %}
+  {% set csv_selected = csv_southAfrica_grapes_fruitAndVegetables %}
+{% endif %}
+
+
+{# Fallback #}
+{% if csv_selected == "" %}
+  {# {% set csv_selected = csv_southAfrica_grapes_fruitAndVegetables %} #}
+{% endif %}
+
+{% set table_data = csv_selected | csvToArray | removeFirstItemFromArray | arrayToGovukTable %}
+
+
+{{ govukTable({
+  caption: "Dates and amounts",
+  captionClasses: "govuk-table__caption--m",
+  firstCellIsHeader: false,
+  head: [
+        {
+          text: "Pest"
+        },
+        {
+          text: "Establishment"
+        },
+        {
+          text: "Impact"
+        },
+        {
+          text: "Establishment * Impact"
+        },
+        {
+          text: "Establishment"
+        },
+        {
+          text: "Impact"
+        },
+        {
+          text: "Establishment * Impact"
+        }
+        ],
+  rows: table_data
+}) }}
+
+
+{# {% set fruit = ["Apples", "Oranges", "Pears", "Bananas"] %}
+<p class="govuk-body">
+  {{ fruit | join(" ") }}  
+<p> #}

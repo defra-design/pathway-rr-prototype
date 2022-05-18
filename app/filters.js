@@ -170,7 +170,11 @@ filters.csvToGovukTable = (csvString) => {
 }
 
 
-
+filters.removeFirstItemFromArray = (array) => {
+  let newArray = [...array]
+  newArray.shift()
+  return newArray
+}
 
 
   
