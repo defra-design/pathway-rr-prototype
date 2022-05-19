@@ -130,21 +130,26 @@ Xiphinema index,5,3,15,5,3,15" %}
 
 
 {% set csv_selected = "" %}
+{% set riskRating = "" %}
 
 {% if data["country"] == "Egypt" and data["format"] == "Bulbs or tubers" and data["host"] == "Solanum tuberosum" %}
   {% set csv_selected = csv_egypt_tuber_bulbstubers %}
+  {% set riskRating = "AAA" %}
 {% endif %}
 
 {% if data["country"] == "South Africa" and data["format"] == "Fruits or vegetables" and data["host"] == "Vitis vinifera ssp. vinifera" %}
   {% set csv_selected = csv_southAfrica_grapes_fruitAndVegetables %}
+  {% set riskRating = "BBB" %}
 {% endif %}
 
 {% if data["country"] == "Norway" and data["format"] == "Cut flowers or branches" and data["host"] == "Abies" %}
   {% set csv_selected = csv_norway_spruce %}
+  {% set riskRating = "CCC" %}
 {% endif %}
 
-{% if data["country"] == "New Zealand" and data["format"] == "Plants for Planting (except seeds, bulbs and tubers)" and data["host"] == "Rosa" %}
+{% if data["country"] == "New Zealand" and data["format"] == "Plants for planting (except seeds, bulbs and tubers)" and data["host"] == "Rosa" %}
   {% set csv_selected = csv_newZealand_roses %}
+  {% set riskRating = "DDD" %}
 {% endif %}
 
 

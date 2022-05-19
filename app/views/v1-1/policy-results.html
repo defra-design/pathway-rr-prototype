@@ -21,7 +21,6 @@ Home – GOV.UK Prototype Kit
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
-
     {% from "moj/components/page-header-actions/macro.njk" import mojPageHeaderActions %}
     {{ mojPageHeaderActions({
       heading: {
@@ -35,22 +34,36 @@ Home – GOV.UK Prototype Kit
     }) }}
 
     <div class="card-parent govuk-!-margin-bottom-6">
-      <div class="card-child"></div>
-      <div class="card-child"></div>
-      <div class="card-child"></div>
+      <div class="card-child">
+        <p class="card-child-small-text">Number of pests</p>
+        <p class="card-child-large-text">Test</p>
+      </div>
+      <div class="card-child">
+        <p class="card-child-small-text">Unmitigated</p>
+        <p class="card-child-large-text">Test</p>
+      </div>
+      <div class="card-child">
+        <p class="card-child-small-text">Mitigated</p>
+        <p class="card-child-large-text">Test</p>
+      </div>
     </div>
+  </div>
+</div>
 
 
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
 
     {% from "key-details-bar/macro.njk" import dwpKeyDetailsBar %}
     {{ dwpKeyDetailsBar({
         primaryIdentifier: {
         text: 'Risk score',
-        value: 'Rating:'
+        value: 'Rating',
+        classes: 'redBackground'
         },
         secondaryIdentifier: {
-        text: 'Risk rating:',
-        value: '1 - Very high'
+        value: data['riskRating'],
+        text: 'Risk rating:'
         },
         additionalData: [
         {
@@ -67,6 +80,12 @@ Home – GOV.UK Prototype Kit
         }
         ]
         }) }}
+  </div>
+</div>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
 
     {% include "includes/pathway_scores_tables.html" %}
 

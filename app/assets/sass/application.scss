@@ -30,6 +30,30 @@ $govuk-assets-path: '/govuk/assets/';
   }
   
   .card-child{
-    background-color: black;
-    height: 160px;
+    background-color: govuk-colour("light-grey");
+    height: 160px;   
+  }
+  
+  .card-child-small-text{
+    margin: 0;
+    font-size: 1.4em;
+    font-weight: 400;
+    padding: 20px 20px 0px 20px;
+    color: govuk-colour("blue");
+  }
+  
+  .card-child-large-text{
+    margin: 0;
+    font-size: 3.6em;
+    font-weight: 900;
+    padding: 0px 20px 0px 20px;
+    color: govuk-colour("blue");
+  }
+  
+  .whiteText{
+    color: white;
+  }
+  
+  .redBackground{
+    background-color: red;
   }
