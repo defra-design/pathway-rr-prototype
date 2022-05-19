@@ -20,3 +20,16 @@ $govuk-assets-path: '/govuk/assets/';
 .govuk-width-container {
   max-width: 1320px;
  }
+ 
+ .card-parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 45px;
+  grid-row-gap: 0px;
+  }
+  
+  .card-child{
+    background-color: black;
+    height: 160px;
+  }
