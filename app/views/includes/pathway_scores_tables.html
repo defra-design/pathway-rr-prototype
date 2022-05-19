@@ -80,9 +80,46 @@ Xiphinema pachtaicum,5,3,15,5,3,15
 Xylophilus ampelinus,2,4,8,2,4,8
 Zaprionus indianus,4,1,4,4,1,4" %}
 
-{% set csv_france_pines = " " %}
+{% set csv_norway_spruce = "Pest,Establishment,Impact,Establishment * Impact,Establishment,Impact,Establishment * Impact
+Adelges pectinatae,5,3,15,5,3,15
+Agrobacterium tumefaciens,,,0,,,0
+Corinectria fuckeliana,,3,0,,3,0
+Dendroctonus micans,,3,0,,2,0
+Gremmeniella abietina,,5,0,,5,0
+Heterobasidion parviporum,5,4,20,5,4,20
+Ips duplicatus,5,3,15,4,2,8
+Ips sexdentatus,,3,0,,3,0
+Ips typographus,5,5,25,4,4,16
+Monochamus urossovii,5,3,15,5,3,15
+Neonectria neomacrospora,,3,0,,3,0
+Phacidiopycnis washingtonensis,,2,0,,2,0
+Phytophthora cambivora,,,0,,,0" %}
 
-{% set csv_india_roses = " " %}
+{% set csv_newZealand_roses = "Pest,Establishment,Impact,Establishment * Impact,Establishment,Impact,Establishment * Impact
+Aphis spiraecola,4,2,8,4,2,8
+Arabis mosaic virus,,3,0,,3,0
+Atrichonotus taeniatulus,5,3,15,5,3,15
+Ceroplastes sinensis,5,2,10,5,2,10
+Chaetosiphon fragaefolii,,,0,,,0
+Cherry necrotic rusty mottle virus,,,0,,,0
+Colletotrichum boninense,5,2,10,5,2,10
+Comstockaspis perniciosa,5,2,10,5,2,10
+Eotetranychus sexmaculatus,4,2,8,4,2,8
+Frankliniella occidentalis,,4,0,,3,0
+Helicotylenchus dihystera,5,3,15,5,3,15
+Hemiberlesia rapax,,1,0,,1,0
+Iris yellow spot virus,5,2,10,5,2,10
+Longidorus elongatus,,,0,,,0
+Meloidogyne hapla,,,0,,,0
+Naupactus cervinus,5,2,10,5,2,10
+Orgyia thyellina,5,3,15,5,2,10
+Prunus necrotic ringspot virus,,2,0,,2,0
+Strawberry latent ringspot virus,,3,0,,3,0
+Tetranychus evansi,5,3,15,3,3,9
+Thrips australis,3,2,6,3,2,6
+Thrips imaginis,4,2,8,4,2,8
+Xiphinema diversicaudatum,,3,0,,3,0
+Xiphinema index,5,3,15,5,3,15" %}
 
 {{ csv_egypt_tuber_bulbstubers | csvToArray | log }}
 
@@ -100,6 +137,14 @@ Zaprionus indianus,4,1,4,4,1,4" %}
 
 {% if data["country"] == "South Africa" and data["format"] == "Fruits or vegetables" and data["host"] == "Vitis vinifera ssp. vinifera" %}
   {% set csv_selected = csv_southAfrica_grapes_fruitAndVegetables %}
+{% endif %}
+
+{% if data["country"] == "Norway" and data["format"] == "Cut flowers or branches" and data["host"] == "Abies" %}
+  {% set csv_selected = csv_norway_spruce %}
+{% endif %}
+
+{% if data["country"] == "New Zealand" and data["format"] == "Plants for Planting (except seeds, bulbs and tubers)" and data["host"] == "Rosa" %}
+  {% set csv_selected = csv_newZealand_roses %}
 {% endif %}
 
 
