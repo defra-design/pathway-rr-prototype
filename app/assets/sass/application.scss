@@ -15,6 +15,8 @@ $govuk-assets-path: '/govuk/assets/';
 @import "patterns/task-list";
 @import "patterns/related-items";
 
+
+
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
 .govuk-width-container {
@@ -23,15 +25,24 @@ $govuk-assets-path: '/govuk/assets/';
  
  .card-parent {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   grid-column-gap: 45px;
   grid-row-gap: 0px;
   }
   
   .card-child{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     background-color: govuk-colour("light-grey");
-    height: 160px;   
+    height: 100%;  
+  }
+  
+  .card-rating-child{
+    background-color: govuk-colour("red");
+    height: 100%;
   }
   
   .card-child-small-text{
@@ -42,6 +53,14 @@ $govuk-assets-path: '/govuk/assets/';
     color: govuk-colour("blue");
   }
   
+  .card-child-rating-small-text{
+    margin: 0;
+    font-size: 1.4em;
+    font-weight: 400;
+    padding: 0px 20px 20px 20px;
+    color: govuk-colour("white");
+  }
+  
   .card-child-large-text{
     margin: 0;
     font-size: 3.6em;
@@ -49,6 +68,15 @@ $govuk-assets-path: '/govuk/assets/';
     padding: 0px 20px 0px 20px;
     color: govuk-colour("blue");
   }
+  
+  .card-child-rating-large-text{
+    margin: 0;
+    font-size: 3em;
+    font-weight: 900;
+    padding: 0px 20px 0px 20px;
+    color: govuk-colour("white");
+  }
+  
   
   .whiteText{
     color: white;
