@@ -13,6 +13,8 @@ $(document).ready(function () {
   var calculateCountry = req.session.data["country"];
 	var calculateHost = req.session.data["host"];
 	var calculateFormat = req.session.data["format"];
+	
+	
 	// var calculateFormatFixed = req.session.data['formatFixed']
 
 	var numPestStat = "";

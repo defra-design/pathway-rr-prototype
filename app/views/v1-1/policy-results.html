@@ -25,8 +25,9 @@ Home – GOV.UK Prototype Kit
 
     {% from "moj/components/page-header-actions/macro.njk" import mojPageHeaderActions %}
     {{ mojPageHeaderActions({
-      heading: {
-        text: 'Pathway import risk rating'
+      heading: { 
+        
+        text: "Pathway import risk rating"
       },
       items: [{
         text: "Search another pathway",
@@ -34,6 +35,8 @@ Home – GOV.UK Prototype Kit
         classes: 'govuk-button--primary'
       }]
     }) }}
+    <h2 class="govuk-heading-m"><span class="govuk-!-font-weight-bold">Import country: {{ data['country'] }} &nbsp;</span> <span class="govuk-!-font-weight-bold">Host: {{ data['host'] }}&nbsp;</span> <span
+      class="govuk-!-font-weight-bold">Format: {{ data['format'] }}</span></h2>
     
     <!-- Using dynamic start cards -->
     {% include "includes/pathway_stat_cards.html" %}  

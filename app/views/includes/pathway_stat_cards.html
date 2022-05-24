@@ -3,10 +3,7 @@
   <div class="card-rating-child">
     <p class="card-child-small-text whiteText">Rating</p>
     <p class="card-child-rating-large-text govuk-!-margin-bottom-0">1 - Very high</p>
-    <p class="card-child-rating-small-text govuk-!-margin-top-0"><span class="govuk-!-font-weight-bold">Import country: {{ data['country'] }} &nbsp;</span> <span class="govuk-!-font-weight-bold">Host: {{ data['host'] }}&nbsp;</span> <span
-        class="govuk-!-font-weight-bold">Format: {{ data['format'] }}</span></p>
         {% include "includes/risk_rating.html" %}
-
   </div>
   <div class="card-child">
     <p class="card-child-small-text">Number of pests</p>
@@ -14,12 +11,12 @@
   </div>
   <div class="card-child">
     <p class="card-child-small-text">Unmitigated</p>
-    <p class="card-child-large-text unmitigateStat">359</p>
+    <p class="card-child-large-text unmitigateStat govuk-!-margin-bottom-0">359</p>
     {% include "includes/unmitigated.html" %}
   </div>
   <div class="card-child">
     <p class="card-child-small-text">Mitigated</p>
-    <p class="card-child-large-text mitigateStat">305</p>
+    <p class="card-child-large-text mitigateStat govuk-!-margin-bottom-0">305</p>
     {% include "includes/mitigated.html" %}
   </div>
 </div>
@@ -30,8 +27,7 @@
   <div class="card-rating-child greenBackground">
     <p class="card-child-small-text whiteText">Rating</p>
     <p class="card-child-rating-large-text govuk-!-margin-bottom-0">4 - Low</p>
-    <p class="card-child-rating-small-text govuk-!-margin-top-0"><span class="govuk-!-font-weight-bold">Import country: {{ data['country'] }} &nbsp;</span> <span class="govuk-!-font-weight-bold">Host: {{ data['host'] }}&nbsp;</span> <span
-        class="govuk-!-font-weight-bold">Format: {{ data['format'] }}</span></p>
+
         {% include "includes/risk_rating.html" %}
 
   </div>
@@ -58,8 +54,6 @@
   <div class="card-rating-child greenBackground">
     <p class="card-child-small-text whiteText">Rating</p>
     <p class="card-child-rating-large-text govuk-!-margin-bottom-0">4 - Low</p>
-    <p class="card-child-rating-small-text govuk-!-margin-top-0"><span class="govuk-!-font-weight-bold">Import country: {{ data['country'] }} &nbsp;</span> <span class="govuk-!-font-weight-bold">Host: {{ data['host'] }}&nbsp;</span> <span
-        class="govuk-!-font-weight-bold">Format: {{ data['format'] }}</span></p>
         {% include "includes/risk_rating.html" %}
 
   </div>
@@ -85,13 +79,11 @@
   <div class="card-rating-child amberBackground">
     <p class="card-child-small-text whiteText">Rating</p>
     <p class="card-child-rating-large-text govuk-!-margin-bottom-0">3 - Medium</p>
-    <p class="card-child-rating-small-text govuk-!-margin-top-0"><span class="govuk-!-font-weight-bold">Import country: {{ data['country'] }} &nbsp;</span> <span class="govuk-!-font-weight-bold">Host: {{ data['host'] }}&nbsp;</span> <span
-        class="govuk-!-font-weight-bold">Format: {{ data['format'] }}</span></p>
-        {% include "includes/risk_rating.html" %}
+        {% include "includes/risk_rating.html" %}     
   </div>
   <div class="card-child">
     <p class="card-child-small-text">Number of pests</p>
-    <p class="card-child-large-text numPestStat">24</p>
+    <p class="card-child-large-text numPestStat govuk-!-margin-bottom-0">24</p>
   </div>
   <div class="card-child">
     <p class="card-child-small-text">Unmitigated</p>
@@ -100,7 +92,7 @@
   </div>
   <div class="card-child">
     <p class="card-child-small-text">Mitigated</p>
-    <p class="card-child-large-text mitigateStat">144</p>
+    <p class="card-child-large-text mitigateStat govuk-!-margin-bottom-0">144</p>
     {% include "includes/mitigated.html" %}
   </div>
 </div>
