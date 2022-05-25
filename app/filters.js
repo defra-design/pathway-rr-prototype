@@ -176,6 +176,18 @@ filters.removeFirstItemFromArray = (array) => {
   return newArray
 }
 
+filters.push = (array, item) => {
+  let newArray = [...array]
+  newArray.push(item)
+  return newArray
+}
+
+// Hyphen separate a string
+// This is a string => this-is-a-string
+filters.kebabCase = (string) => {
+  return string.replace(/([a-z])([A-Z])/g, '$1-$2').replace(/\s+/g, '-').toLowerCase()
+}
+
 
   
   /* ------------------------------------------------------------------

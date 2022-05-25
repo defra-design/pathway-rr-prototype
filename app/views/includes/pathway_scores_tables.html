@@ -158,7 +158,32 @@ Xiphinema index,5,3,15,5,3,15" %}
   {# {% set csv_selected = csv_southAfrica_grapes_fruitAndVegetables %} #}
 {% endif %}
 
-{% set table_data = csv_selected | csvToArray | removeFirstItemFromArray | arrayToGovukTable %}
+{% set source_array_data = csv_selected | csvToArray | removeFirstItemFromArray %}
+{% set array_data = [] %}
+
+{% for row in source_array_data %}
+  {% set new_row = [] %}
+  {% for column in row%}
+    {% if loop.index0 == 0 %}
+      {% set cell %}
+        <a href='{{ column | kebabCase }}'>{{ column }}</a>
+      {% endset %}
+    {# can add other columns here loop.loopindex4 for example #}
+    
+    {% else %}
+      {% set cell = column %}
+    {% endif%}
+    {# can add other columns here #}
+    
+    {% set new_row = new_row | push(cell) %}
+  {% endfor %}
+  {% set array_data = array_data | push(new_row) %}
+{% endfor%}
+
+
+{% set table_data = array_data | arrayToGovukTable%}
+
+
 
 
 {{ govukTable({
