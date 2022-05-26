@@ -20,7 +20,7 @@ $govuk-assets-path: '/govuk/assets/';
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
 .govuk-width-container {
-  max-width: 1280px;
+  max-width: 1080px;
  }
  
  .card-parent {
@@ -28,7 +28,7 @@ $govuk-assets-path: '/govuk/assets/';
   align-items: center;
   grid-template-columns: 2fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  grid-column-gap: 45px;
+  grid-column-gap: 24px;
   grid-row-gap: 0px;
   }
   
@@ -91,4 +91,19 @@ $govuk-assets-path: '/govuk/assets/';
   
   .greenBackground{
     background-color: #28a197;
+  }
+  
+  .govuk-table {
+    font-family: "GDS Transport", arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #0b0c0c;
+    width: 100%;
+    margin-bottom: 20px;
+    border-spacing: 0;
+    border-collapse: collapse;
   }
