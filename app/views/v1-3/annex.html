@@ -45,19 +45,17 @@ Home – GOV.UK Prototype Kit
         label: 'Sub navigation',
         items: [{
           text: 'Scores',
-          href: 'policy-results',
-          active: true
+          href: 'policy-results' 
         }, {
           text: 'Pest List',
           href: 'pest-list'
         }, {
           text: 'Annex details',
-          href: 'annex'
+          href: 'annex',
+          active: true
         }]
       }) }}
-    
-    <!-- Using dynamic start cards -->
-    {% include "includes/pathway_stat_cards.html" %}  
+  
    
   </div>
 </div>
@@ -67,7 +65,7 @@ Home – GOV.UK Prototype Kit
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
 
-    {% include "includes/pathway_scores_tables.html" %}
+    
 
     <div class="govuk-button-group">
       {{ govukButton({
