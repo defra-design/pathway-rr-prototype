@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Aphis spiraecola
+{% endblock %}
+
+<!-- Replace header here -->
+{% block header %}
+  <header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+  <!-- govuk logo removed -->
+    <div class="govuk-header__content">
+      <a href="/" class="govuk-header__link govuk-header__link--service-name">
+        Pathway Pest Risk Register
+      </a>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block content %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "policy-results"
+}) }}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Heterobasidion parviporum</h1>
+    
+
+    {{ govukAccordion({
+      id: "accordion-default",
+      items: [
+        {
+          heading: {
+            text: "Preferred name"
+          },
+          content: {
+            html: "<p class='govuk-body'>This would be the content for Heterobasidion parviporum.</p>"
+          }
+        },
+        {
+          heading: {
+            text: "Common name"
+          },
+          content: {
+            html: "<p class='govuk-body'>This would be the content for Heterobasidion parviporum.</p>"
+          }
+        },
+          {
+          heading: {
+            text: "Synonym"
+          },
+          content: {
+            html: "<p class='govuk-body'>This would be the content for Heterobasidion parviporum.</p>"
+          }
+        },
+          {
+          heading: {
+            text: "Host"
+          },
+          content: {
+            html: "<p class='govuk-body'>This would be the content for Heterobasidion parviporum.</p>"
+          }
+        }
+      ]
+    }) }}
+    
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,128 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Pathway search
+{% endblock %}
+
+
+
+{% block content %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "user-type"
+}) }}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-xl">Policy Import Pathway Search</h1>
+    <form action="policy-calculate" method="post" class="form">
+      {{ govukSelect({
+          id: "country",
+          name: "country",
+          label: {
+          text: "Country of Import"
+          },
+          items: [
+            {
+              value: "Choose country",
+              text: "Choose country",
+              selected: true
+            },
+            {
+              value: "Egypt",
+              text: "Egypt"
+            },
+            {
+              value: "New Zealand",
+              text: "New Zealand"
+            },
+            {
+              value: "Norway",
+              text: "Norway"
+            },
+            {
+              value: "South Africa",
+              text: "South Africa"
+            }
+          ]
+        }) }}
+
+      {{ govukSelect({
+          id: "host",
+          name: "host",
+          label: {
+            text: "Host"
+          },
+          items: [
+            {
+              value: "Choose host",
+              text: "Choose host",
+              selected: true
+            },
+            {
+              value: "Abies",
+              text: "Abies"
+            },
+            {
+              value: "Rosa",
+              text: "Rosa"
+            },
+            {
+              value: "Solanum tuberosum",
+              text: "Solanum tuberosum"
+            },
+            {
+              value: "Vitis vinifera ssp. vinifera",
+              text: "Vitis vinifera ssp. vinifera"
+            }
+          ]
+        }) }}
+
+      {{ govukSelect({
+          id: "format",
+          name: "format",
+          label: {
+            text: "Format"
+          },
+          items: [
+            {
+              value: "Choose format",
+              text: "Choose format",
+              selected: true
+            },
+            {
+              value: "Bulbs or tubers",
+              text: "Bulbs or tubers"
+            },
+            {
+              value: "Cut flowers or branches",
+              text: "Cut flowers or branches"
+            },
+            {
+              value: "Fruits or vegetables",
+              text: "Fruits or vegetables"
+            },
+            {
+              value: "Plants for planting (except seeds, bulbs and tubers)",
+              text: "Plants for planting (except seeds, bulbs and tubers)"
+            }
+          ]
+        }) }}
+
+      {{ govukButton({
+          text: "Continue"
+        }) }}
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}

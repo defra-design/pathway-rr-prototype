@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Home – GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+{% block content %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "policy-search"
+}) }}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+
+    {% from "moj/components/page-header-actions/macro.njk" import mojPageHeaderActions %}
+    {{ mojPageHeaderActions({
+      heading: { 
+        
+        text: "Pathway import risk rating"
+      },
+      items: [{
+        text: "Search another pathway",
+        href: "policy-search",
+        classes: 'govuk-button--primary'
+      }]
+    }) }}
+    <h2 class="govuk-heading-m"><span class="govuk-!-font-weight-bold">Import country: {{ data['country'] }} &nbsp; | &nbsp;</span> <span class="govuk-!-font-weight-bold">Host: {{ data['host'] }}&nbsp; | &nbsp;</span><span
+      class="govuk-!-font-weight-bold">Format: {{ data['format'] }}</span></h2>
+    
+    <!-- Using dynamic start cards -->
+    {% include "includes/pathway_stat_cards.html" %}  
+    <!-- <div class="card-parent govuk-!-margin-bottom-6">
+      <div class="card-child">
+        <p class="card-child-small-text">Number of pests</p>
+        <p class="card-child-large-text numPestStat">Test</p>
+      </div>
+      <div class="card-child">
+        <p class="card-child-small-text">Unmitigated</p>
+        <p class="card-child-large-text unmitigateStat">Test</p>
+      </div>
+      <div class="card-child">
+        <p class="card-child-small-text">Mitigated</p>
+        <p class="card-child-large-text mitigateStat">Test</p>
+      </div>
+    </div> -->
+  </div>
+</div>
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    {% include "includes/pathway_scores_tables.html" %}
+
+    <div class="govuk-button-group">
+      {{ govukButton({
+            text: "Search another pathway",
+            href: "policy-search"
+          }) }}
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}
