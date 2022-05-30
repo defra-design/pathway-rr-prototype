@@ -37,23 +37,28 @@ Home – GOV.UK Prototype Kit
     }) }}
     <h2 class="govuk-heading-m"><span class="govuk-!-font-weight-bold">Import country: {{ data['country'] }} &nbsp; | &nbsp;</span> <span class="govuk-!-font-weight-bold">Host: {{ data['host'] }}&nbsp; | &nbsp;</span><span
       class="govuk-!-font-weight-bold">Format: {{ data['format'] }}</span></h2>
+      
+      
+      {%- from "moj/components/sub-navigation/macro.njk" import mojSubNavigation -%}
+
+      {{ mojSubNavigation({
+        label: 'Sub navigation',
+        items: [{
+          text: 'Nav item 1',
+          href: '#1',
+          active: true
+        }, {
+          text: 'Nav item 2',
+          href: '#2'
+        }, {
+          text: 'Nav item 3',
+          href: '#3'
+        }]
+      }) }}
     
     <!-- Using dynamic start cards -->
     {% include "includes/pathway_stat_cards.html" %}  
-    <!-- <div class="card-parent govuk-!-margin-bottom-6">
-      <div class="card-child">
-        <p class="card-child-small-text">Number of pests</p>
-        <p class="card-child-large-text numPestStat">Test</p>
-      </div>
-      <div class="card-child">
-        <p class="card-child-small-text">Unmitigated</p>
-        <p class="card-child-large-text unmitigateStat">Test</p>
-      </div>
-      <div class="card-child">
-        <p class="card-child-small-text">Mitigated</p>
-        <p class="card-child-large-text mitigateStat">Test</p>
-      </div>
-    </div> -->
+   
   </div>
 </div>
 
