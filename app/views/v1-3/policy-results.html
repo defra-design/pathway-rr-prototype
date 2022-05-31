@@ -69,13 +69,15 @@ Home – GOV.UK Prototype Kit
   <div class="govuk-grid-column-full">
     
     
+    {% if data['country'] == 'Canada' %}
+      <img src="/public/images/canada.png" style="width: 100%;" class="govuk-!-margin-bottom-6">
+    {% endif %}
     
-    {% if data["country"] != " " or data["format"] != " " or data["host"] != " " %}
-      <img src="/public/images/graph-complex.png" style="width: 100%;" class="govuk-!-margin-bottom-6">
+    {% if data['country'] == 'Netherlands' %}
+      <img src="/public/images/netherlandsw.png" style="width: 100%;" class="govuk-!-margin-bottom-6">
     {% endif %}
 
 
-    <div class="graphImage"></div>
 
 
   </div>
