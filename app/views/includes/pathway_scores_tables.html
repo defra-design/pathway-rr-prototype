@@ -1,127 +1,108 @@
 <!-- Set variable for csv -->
-{% set csv_egypt_tuber_bulbstubers = "Pest,Establishment,Impact,Establishment * Impact,Establishment,Impact,Establishment * Impact
-Aphis spiraecola,4,2,8,4,2,8
-Bagrada hilaris,3,3,9,3,3,9
-Beet curly top virus,5,4,20,5,4,20
-Beet necrotic yellow vein benyvirus,,3,0,,3,0
-Chrysodeixis chalcites,0,3,0,0,3,0
-Globodera rostochiensis Non-European Strains,5,4,20,5,4,20
-Helicotylenchus dihystera,5,3,15,5,3,15
-Helicoverpa armigera,5,2,10,5,2,10
-Leveillula taurica,,3,0,,3,0
-Liriomyza sativae,5,5,25,3,3,9
-Liriomyza trifolii,5,3,15,3,3,9
-Meloidogyne arenaria,5,3,15,5,3,15
-Meloidogyne hapla,,,0,,,0
-Meloidogyne javanica,5,3,15,5,3,15
-Naupactus cervinus,5,2,10,5,2,10
-Ostrinia nubilalis,,3,0,,3,0
-Paratrichodorus minor,5,2,10,4,2,8
-Phenacoccus parvus,3,2,6,3,2,6
-Phenacoccus solani,5,3,15,4,3,12
-Phenacoccus solenopsis,5,3,15,4,3,12
-Phytophthora citrophthora,,,0,,,0
-Phytophthora infestans,,5,0,,5,0
-Potato spindle tuber viroid,5,3,15,3,3,9
-Potato virus M (non-European strains),5,3,15,5,3,15
-Potato virus S (non-European strains),5,3,15,5,3,15
-Potato virus X (non-European strains),5,2,10,5,2,10
-Potato virus Y (non-European strains),5,3,15,5,3,15
-Pratylenchus brachyurus,2,1,2,2,1,2
-Pratylenchus scribneri,4,2,8,4,2,8
-Ralstonia solanacearum,,5,0,,3,0
-Rhopalosiphum rufiabdominale,3,3,9,3,3,9
-Spodoptera littoralis,5,3,15,4,3,12
-Spongospora subterranea,,,0,,,0
-Tomato chlorosis virus,5,3,15,4,3,12
-Tomato ringspot virus,,2,0,,2,0
-Tomato spotted wilt virus,,3,0,,3,0
-Tomato yellow leaf curl virus,5,4,20,2,4,8
-Trialeurodes ricini,4,3,12,4,3,12
-Tuta absoluta,0,3,0,0,3,0" %}
+{% set csv_canada_pinus = "Pest,Establishment,Impact,Establishment * Impact,Establishment,Impact,Establishment * Impact,,
+Arceuthobium americanum,5,3,15,5,3,15,,
+Arceuthobium campylopodum,5,3,15,5,3,15,,
+Arceuthobium laricis,5,3,15,5,3,15,,
+Arceuthobium tsugense,5,5,25,5,5,25,,
+Atropellis pinicola,5,3,15,5,3,15,,
+Atropellis piniphila,5,4,20,5,4,20,,
+Atropellis tingens,5,2,10,5,2,10,,
+Bursaphelenchus xylophilus,4,3,12,4,3,12,,
+Chionaspis pinifoliae,5,2,10,5,2,10,,
+Choristoneura fumiferana,5,5,25,5,5,25,,
+Choristoneura lambertiana,5,3,15,5,3,15,,
+Choristoneura occidentalis,5,4,20,5,4,20,,
+Choristoneura pinus pinus,5,4,20,5,4,20,,
+Coleosporium asterum,5,2,10,5,2,10,,
+Cronartium coleosporioides,5,3,15,5,3,15,,
+Cronartium comandrae,5,3,15,5,3,15,,
+Cronartium comptoniae,5,4,20,5,4,20,,
+Cronartium harknessii,5,5,25,5,5,25,,
+Cronartium quercuum,5,3,15,5,3,15,,
+Dendroctonus brevicomis,5,5,25,5,5,25,,
+Dendroctonus ponderosae,5,5,25,5,5,25,,
+Dendroctonus rufipennis,5,5,25,5,5,25,,
+Dendroctonus valens,5,4,20,5,4,20,,
+Gnathotrichus sulcatus,5,3,15,5,3,15,,
+Grosmannia wageneri,5,5,25,5,5,25,,
+Helicotylenchus dihystera,5,3,15,5,3,15,,
+Heterobasidion irregulare,5,5,25,5,4,20,,
+Ips calligraphus,5,3,15,5,3,15,,
+Ips grandicollis,5,4,20,5,4,20,,
+Ips paraconfusus,5,5,25,5,5,25,,
+Ips pini,5,3,15,5,3,15,,
+Ips plastographus,5,2,10,5,2,10,,
+Lecanosticta acicola,5,3,15,5,3,15,,
+Lygus lineolaris,5,3,15,5,3,15,,
+Malacosoma disstria,5,3,15,5,3,15,,
+Melampsora medusae,5,3,15,5,3,15,,
+Monochamus carolinensis,4,3,12,4,3,12,,
+Monochamus maculosus,4,3,12,4,3,12,,
+Monochamus notatus,4,3,12,4,3,12,,
+Monochamus obtusus,4,3,12,4,3,12,,
+Monochamus scutellatus,4,4,16,4,4,16,,
+Monochamus titillator,4,3,12,4,3,12,,
+Pissodes nemorensis,5,5,25,5,5,25,,
+Pissodes strobi,5,5,25,5,5,25,,
+Pissodes terminalis,5,3,15,5,3,15,,
+Platynota idaeusalis,5,2,10,5,2,10,,
+Toumeyella parvicornis,5,3,15,5,3,15,,
+Xiphinema bakeri,5,2,10,5,2,10,,
+Xiphinema chambersi,5,2,10,5,2,10,," %}
 
-{% set csv_southAfrica_grapes_fruitAndVegetables = "Pest,Establishment,Impact,Establishment * Impact,Establishment,Impact,Establishment * Impact
-Agrobacterium tumefaciens,,,0,,,0
-Aleurocanthus spiniferus,3,2,6,3,2,6
-Aleurocanthus woglumi,0,0,0,0,0,0
-Aonidiella orientalis,4,2,8,4,2,8
-Arabis mosaic virus,,3,0,,3,0
-Armillaria mellea,,,0,,,0
-Bactrocera dorsalis species complex,0,0,0,0,0,0
-Calepitrimerus vitis,4,2,8,4,2,8
-Ceratitis rosa,0,0,0,0,0,0
-Daktulosphaira vitifoliae,,4,0,,4,0
-Frankliniella occidentalis,,4,0,,3,0
-Grapevine Syrah virus 1,5,1,5,5,1,5
-Grapevine fanleaf virus,,2,0,,2,0
-Helicotylenchus dihystera,5,3,15,5,3,15
-Heteronychus arator,4,3,12,4,3,12
-Hop stunt viroid,5,4,20,4,4,16
-Longidorus elongatus,,,0,,,0
-Margarodes prieskaensis,3,4,12,3,4,12
-Margarodes vredendalensis,3,4,12,3,4,12
-Meloidogyne arenaria,5,3,15,5,3,15
-Meloidogyne ethiopica,5,3,15,5,3,15
-Meloidogyne hapla,,,0,,,0
-Parasaissetia nigra,,3,0,,3,0
-Phaeoacremonium viticola,5,2,10,5,2,10
-Phenacoccus solani,5,3,15,4,3,12
-Phlyctinus callosus,5,3,15,5,3,15
-Pseudaonidia trilobitiformis,3,2,6,3,2,6
-Raspberry bushy dwarf virus,,,0,,,0
-Scutellonema brachyurus,5,2,10,5,2,10
-Spodoptera littoralis,5,3,15,4,3,12
-Thaumatotibia leucotreta,3,3,9,3,3,9
-Tylenchulus semipenetrans,2,3,6,2,3,6
-Xiphinema diversicaudatum,,3,0,,3,0
-Xiphinema index,5,3,15,5,3,15
-Xiphinema insigne,3,2,6,3,2,6
-Xiphinema pachtaicum,5,3,15,5,3,15
-Xylophilus ampelinus,2,4,8,2,4,8
-Zaprionus indianus,4,1,4,4,1,4" %}
+{% set csv_norway_pinus = "Pest,Establishment,Impact,Establishment * Impact,Establishment,Impact,Establishment * Impact,,
+Heterobasidion parviporum,5,4,20,5,4,20,,
+Ips duplicatus,5,3,15,4,2,8,,
+Ips typographus,5,5,25,4,4,16,,
+Leucaspis pini,5,2,10,5,2,10,,
+Monochamus urossovii,5,3,15,5,3,15,," %}
 
-{% set csv_norway_spruce = "Pest,Establishment,Impact,Establishment * Impact,Establishment,Impact,Establishment * Impact
-Adelges pectinatae,5,3,15,5,3,15
-Agrobacterium tumefaciens,,,0,,,0
-Corinectria fuckeliana,,3,0,,3,0
-Dendroctonus micans,,3,0,,2,0
-Gremmeniella abietina,,5,0,,5,0
-Heterobasidion parviporum,5,4,20,5,4,20
-Ips duplicatus,5,3,15,4,2,8
-Ips sexdentatus,,3,0,,3,0
-Ips typographus,5,5,25,4,4,16
-Monochamus urossovii,5,3,15,5,3,15
-Neonectria neomacrospora,,3,0,,3,0
-Phacidiopycnis washingtonensis,,2,0,,2,0
-Phytophthora cambivora,,,0,,,0" %}
+{% set csv_argentina_solanum = "Pest,Establishment,Impact,Establishment * Impact,Establishment,Impact,Establishment * Impact,,
+Andean potato latent virus,4,3,12,4,3,12,,
+Aphis spiraecola,4,2,8,4,2,8,,
+Atrichonotus taeniatulus,5,3,15,5,3,15,,
+Beet curly top virus,5,4,20,5,4,20,,
+Colaspis chlorites,5,3,15,5,3,15,,
+Diabrotica significata,2,2,4,2,2,4,,
+Diabrotica speciosa,2,5,10,2,2,4,,
+Elasmopalpus lignosellus,2,1,2,2,1,2,,
+Epicauta (Epicauta) atomaria,5,3,15,5,3,15,,
+Epicauta (Epicauta) luctifera,5,3,15,5,3,15,,
+Epicauta (Epicauta) monachica,5,3,15,5,3,15,,
+Epitrix fasciata,5,3,15,5,3,15,,
+Globodera ellingtonae,5,2,10,5,2,10,,
+Globodera pallida Non-European Strains,5,4,20,5,4,20,,
+Helicoverpa armigera,5,2,10,5,2,10,,
+Liriomyza huidobrensis,5,3,15,3,3,9,,
+Liriomyza sativae,5,5,25,3,3,9,,
+Listroderes difficilis,5,3,15,5,3,15,,
+Meloidogyne arenaria,5,3,15,5,3,15,,
+Meloidogyne chitwoodi,5,4,20,5,4,20,,
+Meloidogyne javanica,5,3,15,5,3,15,,
+Nacobbus aberrans sensu lato,5,4,20,5,4,20,,
+Naupactus cervinus,5,2,10,5,2,10,,
+Naupactus leucoloma,5,4,20,4,3,12,,
+Naupactus xanthographus,4,3,12,4,3,12,,
+Paratrichodorus minor,5,2,10,4,2,8,,
+Phenacoccus parvus,3,2,6,3,2,6,,
+Phenacoccus solenopsis,5,3,15,4,3,12,,
+Potato deforming mosaic virus Argentina,5,3,15,5,3,15,,
+Potato leaf roll virus (non-European),5,4,20,5,4,20,,
+Potato virus M (non-European strains),5,3,15,5,3,15,,
+Potato virus S (non-European strains),5,3,15,5,3,15,,
+Potato virus X (non-European strains),5,2,10,5,2,10,,
+Potato virus Y (non-European strains),5,3,15,5,3,15,,
+Pratylenchus scribneri,4,2,8,4,2,8,,
+Rhigopsidius tucumanus,5,3,15,5,3,15,,
+Rhopalosiphum rufiabdominale,3,3,9,3,3,9,,
+Spodoptera eridania,5,2,10,4,2,8,,
+Tetranychus evansi,5,3,15,3,3,9,," %}
 
-{% set csv_newZealand_roses = "Pest,Establishment,Impact,Establishment * Impact,Establishment,Impact,Establishment * Impact
-Aphis spiraecola,4,2,8,4,2,8
-Arabis mosaic virus,,3,0,,3,0
-Atrichonotus taeniatulus,5,3,15,5,3,15
-Ceroplastes sinensis,5,2,10,5,2,10
-Chaetosiphon fragaefolii,,,0,,,0
-Cherry necrotic rusty mottle virus,,,0,,,0
-Colletotrichum boninense,5,2,10,5,2,10
-Comstockaspis perniciosa,5,2,10,5,2,10
-Eotetranychus sexmaculatus,4,2,8,4,2,8
-Frankliniella occidentalis,,4,0,,3,0
-Helicotylenchus dihystera,5,3,15,5,3,15
-Hemiberlesia rapax,,1,0,,1,0
-Iris yellow spot virus,5,2,10,5,2,10
-Longidorus elongatus,,,0,,,0
-Meloidogyne hapla,,,0,,,0
-Naupactus cervinus,5,2,10,5,2,10
-Orgyia thyellina,5,3,15,5,2,10
-Prunus necrotic ringspot virus,,2,0,,2,0
-Strawberry latent ringspot virus,,3,0,,3,0
-Tetranychus evansi,5,3,15,3,3,9
-Thrips australis,3,2,6,3,2,6
-Thrips imaginis,4,2,8,4,2,8
-Xiphinema diversicaudatum,,3,0,,3,0
-Xiphinema index,5,3,15,5,3,15" %}
+{% set csv_netherlands_dendrombium = "Pest,Establishment,Impact,Establishment * Impact,Establishment,Impact,Establishment * Impact,,
+Dichromothrips corbetti,5,1,5,5,1,5,,
+Phenacoccus solani,5,3,15,4,3,12,," %}
 
-{{ csv_egypt_tuber_bulbstubers | csvToArray | log }}
+{{ csv_canada_pinus | csvToArray | log }}
 
 
 {{ data | log }}
@@ -132,24 +113,20 @@ Xiphinema index,5,3,15,5,3,15" %}
 {% set csv_selected = "" %}
 {% set riskRating = "" %}
 
-{% if data["country"] == "Egypt" and data["format"] == "Bulbs or tubers" and data["host"] == "Solanum tuberosum" %}
-  {% set csv_selected = csv_egypt_tuber_bulbstubers %}
-  {% set riskRating = "AAA" %}
+{% if data["country"] == "Canada" and data["format"] == "Plants for planting" and data["host"] == "Pinus" %}
+  {% set csv_selected = csv_canada_pinus %}
 {% endif %}
 
-{% if data["country"] == "South Africa" and data["format"] == "Fruits or vegetables" and data["host"] == "Vitis vinifera ssp. vinifera" %}
-  {% set csv_selected = csv_southAfrica_grapes_fruitAndVegetables %}
-  {% set riskRating = "BBB" %}
+{% if data["country"] == "Argentina" and data["format"] == "Bulbs or tubers" and data["host"] == "Solanum tuberosum" %}
+  {% set csv_selected = csv_argentina_solanum %}
 {% endif %}
 
-{% if data["country"] == "Norway" and data["format"] == "Cut flowers or branches" and data["host"] == "Abies" %}
-  {% set csv_selected = csv_norway_spruce %}
-  {% set riskRating = "CCC" %}
+{% if data["country"] == "Norway" and data["format"] == "Plants for planting" and data["host"] == "Pinus" %}
+  {% set csv_selected = csv_norway_pinus %}
 {% endif %}
 
-{% if data["country"] == "New Zealand" and data["format"] == "Plants for planting (except seeds, bulbs and tubers)" and data["host"] == "Rosa" %}
-  {% set csv_selected = csv_newZealand_roses %}
-  {% set riskRating = "DDD" %}
+{% if data["country"] == "Netherlands" and data["format"] == "Cut flowers or branches" and data["host"] == "Dendrombium" %}
+  {% set csv_selected = csv_netherlands_dendrombium %}
 {% endif %}
 
 
@@ -185,7 +162,6 @@ Xiphinema index,5,3,15,5,3,15" %}
 
 
 
-
 {{ govukTable({
   classes: "govuk-!-margin-top-6",
   firstCellIsHeader: false,
@@ -210,9 +186,6 @@ Xiphinema index,5,3,15,5,3,15" %}
         },
         {
           text: "Establishment * Impact"
-        },
-        {
-          text: "Another col"
         }
         ],
   rows: table_data

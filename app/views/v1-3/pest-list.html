@@ -26,7 +26,6 @@ Home – GOV.UK Prototype Kit
     {% from "moj/components/page-header-actions/macro.njk" import mojPageHeaderActions %}
     {{ mojPageHeaderActions({
       heading: { 
-        
         text: "Pathway import pest list"
       },
       items: [{
@@ -36,12 +35,12 @@ Home – GOV.UK Prototype Kit
       }]
     }) }}
     <h2 class="govuk-heading-m"><span class="govuk-!-font-weight-bold">Import country: {{ data['country'] }} &nbsp; | &nbsp;</span> <span class="govuk-!-font-weight-bold">Host: {{ data['host'] }}&nbsp; | &nbsp;</span><span
-      class="govuk-!-font-weight-bold">Format: {{ data['format'] }}</span></h2>
-      
-      
-      {%- from "moj/components/sub-navigation/macro.njk" import mojSubNavigation -%}
+        class="govuk-!-font-weight-bold">Format: {{ data['format'] }}</span></h2>
 
-      {{ mojSubNavigation({
+
+    {%- from "moj/components/sub-navigation/macro.njk" import mojSubNavigation -%}
+
+    {{ mojSubNavigation({
         label: 'Sub navigation',
         items: [{
           text: 'Scores',
@@ -55,8 +54,8 @@ Home – GOV.UK Prototype Kit
           href: 'annex'
         }]
       }) }}
-  
-   
+
+
   </div>
 </div>
 

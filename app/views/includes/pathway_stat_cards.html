@@ -1,8 +1,8 @@
-{% if data["country"] == "Egypt" and data["format"] == "Bulbs or tubers" and data["host"] == "Solanum tuberosum" %}
+{% if data["country"] == "Canada" and data["format"] == "Plants for planting" and data["host"] == "Pinus" %}
 <div class="card-parent govuk-!-margin-bottom-6">
   <div class="card-child">
     <p class="card-child-small-text">Unmitigated risk rating</p>
-    <p class="card-child-large-text unmitigateStat govuk-!-margin-bottom-0">Low</p>
+    <p class="card-child-large-text unmitigateStat govuk-!-margin-bottom-0">Very high</p>
     {% include "includes/unmitigated.html" %}
   </div>
   <div class="card-child">
@@ -12,89 +12,90 @@
   </div>
   <div class="card-child">
     <p class="card-child-small-text">Pathway score</p>
-    <p class="card-child-large-text numPestStat">305</p>
+    <p class="card-child-large-text numPestStat">818</p>
   </div>
   <div class="card-child">
-    <p class="card-child-smallest-text">Number of pests</p>
-    <p class="card-child-smallest-text">Unmitigated score</p>
-    <p class="card-child-smallest-text">Mitigated score</p>
-    <p class="card-child-smallest-text">Format weighting</p>  
+    <p class="card-child-smallest-text">Number of pests: 49</p>
+    <p class="card-child-smallest-text">Unmitigated score: 823</p>
+    <p class="card-child-smallest-text">Mitigated score: 818</p>
+    <p class="card-child-smallest-text">Format weighting: 1</p>
   </div>
 </div>
 {% endif %}
 
-{% if data["country"] == "South Africa" and data["format"] == "Fruits or vegetables" and data["host"] == "Vitis vinifera ssp. vinifera" %}
+{% if data["country"] == "Norway" and data["format"] == "Plants for planting" and data["host"] == "Pinus" %}
 <div class="card-parent govuk-!-margin-bottom-6">
-  <div class="card-rating-child greenBackground">
-    <p class="card-child-small-text whiteText">Rating</p>
-    <p class="card-child-rating-large-text govuk-!-margin-bottom-0">4 - Low</p>
-
-        {% include "includes/risk_rating.html" %}
-
-  </div>
   <div class="card-child">
-    <p class="card-child-small-text">Number of pests</p>
-    <p class="card-child-large-text numPestStat">38</p>
-  </div>
-  <div class="card-child">
-    <p class="card-child-small-text">Unmitigated</p>
-    <p class="card-child-large-text unmitigateStat">262</p>
+    <p class="card-child-small-text">Unmitigated risk rating</p>
+    <p class="card-child-large-text unmitigateStat govuk-!-margin-bottom-0">Very high</p>
     {% include "includes/unmitigated.html" %}
   </div>
   <div class="card-child">
-    <p class="card-child-small-text">Mitigated</p>
-    <p class="card-child-large-text mitigateStat">252</p>
+    <p class="card-child-small-text">Mitigated risk rating</p>
+    <p class="card-child-large-text mitigateStat govuk-!-margin-bottom-0">Very high</p>
     {% include "includes/mitigated.html" %}
-
+  </div>
+  <div class="card-child">
+    <p class="card-child-small-text">Pathway score</p>
+    <p class="card-child-large-text numPestStat">69</p>
+  </div>
+  <div class="card-child">
+    <p class="card-child-smallest-text">Number of pests: 5</p>
+    <p class="card-child-smallest-text">Unmitigated score: 85</p>
+    <p class="card-child-smallest-text">Mitigated score: 69</p>
+    <p class="card-child-smallest-text">Format weighting: 1</p>
   </div>
 </div>
 {% endif %}
 
-{% if data["country"] == "Norway" and data["format"] == "Cut flowers or branches" and data["host"] == "Abies" %}
+{% if data["country"] == "Argentina" and data["format"] == "Bulbs and tubers" and data["host"] == "Solanum tuberosum" %}
 <div class="card-parent govuk-!-margin-bottom-6">
-  <div class="card-rating-child greenBackground">
-    <p class="card-child-small-text whiteText">Rating</p>
-    <p class="card-child-rating-large-text govuk-!-margin-bottom-0">4 - Low</p>
-        {% include "includes/risk_rating.html" %}
-
-  </div>
-  <div class="card-child">
-    <p class="card-child-small-text">Number of pests</p>
-    <p class="card-child-large-text numPestStat">13</p>
-  </div>
-  <div class="card-child">
-    <p class="card-child-small-text">Unmitigated</p>
-    <p class="card-child-large-text unmitigateStat">90</p>
-    {% include "includes/unmitigated.html" %}
-  </div>
-  <div class="card-child">
-    <p class="card-child-small-text">Mitigated</p>
-    <p class="card-child-large-text mitigateStat">74</p>
-    {% include "includes/mitigated.html" %}
-  </div>
+  <div class="card-parent govuk-!-margin-bottom-6">
+    <div class="card-child">
+      <p class="card-child-small-text">Unmitigated risk rating</p>
+      <p class="card-child-large-text unmitigateStat govuk-!-margin-bottom-0">Low</p>
+      {% include "includes/unmitigated.html" %}
+    </div>
+    <div class="card-child">
+      <p class="card-child-small-text">Mitigated risk rating</p>
+      <p class="card-child-large-text mitigateStat govuk-!-margin-bottom-0">Low</p>
+      {% include "includes/mitigated.html" %}
+    </div>
+    <div class="card-child">
+      <p class="card-child-small-text">Pathway score</p>
+      <p class="card-child-large-text numPestStat">482</p>
+    </div>
+    <div class="card-child">
+      <p class="card-child-smallest-text">Number of pests: 39</p>
+      <p class="card-child-smallest-text">Unmitigated score: 531</p>
+      <p class="card-child-smallest-text">Mitigated score: 482</p>
+      <p class="card-child-smallest-text">Format weighting: 1</p>
+    </div>
 </div>
 {% endif %}
 
-{% if data["country"] == "New Zealand" and data["format"] == "Plants for planting (except seeds, bulbs and tubers)" and data["host"] == "Rosa" %}
+{% if data["country"] == "Netherlands" and data["format"] == "Cut flowers or branches" and data["host"] == "Dendrombium" %}
 <div class="card-parent govuk-!-margin-bottom-6">
-  <div class="card-rating-child amberBackground">
-    <p class="card-child-small-text whiteText">Rating</p>
-    <p class="card-child-rating-large-text govuk-!-margin-bottom-0">3 - Medium</p>
-        {% include "includes/risk_rating.html" %}     
-  </div>
-  <div class="card-child">
-    <p class="card-child-small-text">Number of pests</p>
-    <p class="card-child-large-text numPestStat govuk-!-margin-bottom-0">24</p>
-  </div>
-  <div class="card-child">
-    <p class="card-child-small-text">Unmitigated</p>
-    <p class="card-child-large-text unmitigateStat">155</p>
-    {% include "includes/unmitigated.html" %}
-  </div>
-  <div class="card-child">
-    <p class="card-child-small-text">Mitigated</p>
-    <p class="card-child-large-text mitigateStat govuk-!-margin-bottom-0">144</p>
-    {% include "includes/mitigated.html" %}
-  </div>
+  <div class="card-parent govuk-!-margin-bottom-6">
+    <div class="card-child">
+      <p class="card-child-small-text">Unmitigated risk rating</p>
+      <p class="card-child-large-text unmitigateStat govuk-!-margin-bottom-0">Very low</p>
+      {% include "includes/unmitigated.html" %}
+    </div>
+    <div class="card-child">
+      <p class="card-child-small-text">Mitigated risk rating</p>
+      <p class="card-child-large-text mitigateStat govuk-!-margin-bottom-0">Very low</p>
+      {% include "includes/mitigated.html" %}
+    </div>
+    <div class="card-child">
+      <p class="card-child-small-text">Pathway score</p>
+      <p class="card-child-large-text numPestStat">4.25</p>
+    </div>
+    <div class="card-child">
+      <p class="card-child-smallest-text">Number of pests: 2</p>
+      <p class="card-child-smallest-text">Unmitigated score: 20</p>
+      <p class="card-child-smallest-text">Mitigated score: 17</p>
+      <p class="card-child-smallest-text">Format weighting: 4</p>
+    </div>
 </div>
 {% endif %}
