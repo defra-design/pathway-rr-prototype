@@ -36,12 +36,12 @@ Home – GOV.UK Prototype Kit
       }]
     }) }}
     <h2 class="govuk-heading-m"><span class="govuk-!-font-weight-bold">Import country: {{ data['country'] }} &nbsp; | &nbsp;</span> <span class="govuk-!-font-weight-bold">Host: {{ data['host'] }}&nbsp; | &nbsp;</span><span
-      class="govuk-!-font-weight-bold">Format: {{ data['format'] }}</span></h2>
-      
-      
-      {%- from "moj/components/sub-navigation/macro.njk" import mojSubNavigation -%}
+        class="govuk-!-font-weight-bold">Format: {{ data['format'] }}</span></h2>
 
-      {{ mojSubNavigation({
+
+    {%- from "moj/components/sub-navigation/macro.njk" import mojSubNavigation -%}
+
+    {{ mojSubNavigation({
         label: 'Sub navigation',
         items: [{
           text: 'Scores',
@@ -55,10 +55,11 @@ Home – GOV.UK Prototype Kit
           href: 'annex'
         }]
       }) }}
-    
+
     <!-- Using dynamic start cards -->
-    {% include "includes/pathway_stat_cards.html" %}  
-   
+    {% include "includes/pathway_stat_cards.html" %}
+
+
   </div>
 </div>
 
@@ -66,15 +67,16 @@ Home – GOV.UK Prototype Kit
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-full">
+    
+    
+    
+    {% if data["country"] != " " or data["format"] != " " or data["host"] != " " %}
+      <img src="/public/images/graph-complex.png" style="width: 100%;" class="govuk-!-margin-bottom-6">
+    {% endif %}
 
-    {% include "includes/pathway_scores_tables.html" %}
 
-    <div class="govuk-button-group">
-      {{ govukButton({
-            text: "Search another pathway",
-            href: "policy-search"
-          }) }}
-    </div>
+    <div class="graphImage"></div>
+
 
   </div>
 </div>

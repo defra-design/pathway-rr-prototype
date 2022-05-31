@@ -21,105 +21,132 @@ $govuk-assets-path: '/govuk/assets/';
 
 .govuk-width-container {
   max-width: 1080px;
- }
- 
- .card-parent {
+}
+
+.card-parent {
   display: grid;
   align-items: center;
   grid-template-columns: 1.2fr 1fr 0.8fr 1fr;
   grid-template-rows: 1fr;
   grid-column-gap: 24px;
   grid-row-gap: 0px;
-  }
-  
-  .card-child{
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    background-color: govuk-colour("light-grey");
-    height: 100%;  
-  }
-  
-  .card-rating-child{
-    background-color: govuk-colour("red");
-    height: 100%;
-  }
-  
-  .card-child-smallest-text:first-child{
-    margin: 0;
-    font-size: 0.8em;
-    font-weight: 400;
-    padding: 20px 20px 0px 20px;
-    color: govuk-colour("blue");
-  }
-  
-  .card-child-smallest-text{
-    margin: 0;
-    font-size: 0.8em;
-    font-weight: 400;
-    padding: 8px 20px 0px 20px;
-    color: govuk-colour("blue");
-  }
-  
-  .card-child-small-text{
-    margin: 0;
-    font-size: 1.4em;
-    font-weight: 400;
-    padding: 20px 20px 0px 20px;
-    color: govuk-colour("blue");
-  }
-  
-  .card-child-rating-small-text{
-    margin: 0;
-    font-size: 1.4em;
-    font-weight: 400;
-    padding: 0px 20px 20px 20px;
-    color: govuk-colour("white");
-  }
-  
-  .card-child-large-text{
-    margin: 0;
-    font-size: 3.6em;
-    font-weight: 900;
-    padding: 0px 20px 0px 20px;
-    color: govuk-colour("blue");
-  }
-  
-  .card-child-rating-large-text{
-    margin: 0;
-    font-size: 3.6em;
-    font-weight: 900;
-    padding: 0px 20px 0px 20px;
-    color: govuk-colour("white");
-  }
-  
-  
-  .whiteText{
-    color: white;
-  }
-  
-  .redBackground{
-    background-color: red;
-  }
-  .amberBackground{
-    background-color: #FEB204;
-  }
-  
-  .greenBackground{
-    background-color: #28a197;
-  }
-  
-  .govuk-table {
-    font-family: "GDS Transport", arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-weight: 400;
-    font-size: 14px;
-    font-size: 1rem;
-    line-height: 1.25;
-    color: #0b0c0c;
-    width: 100%;
-    margin-bottom: 20px;
-    border-spacing: 0;
-    border-collapse: collapse;
-  }
+}
+
+.card-child {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: govuk-colour("light-grey");
+  color: #0b0c0c;
+  height: 100%;
+}
+
+.green-card {
+  background-color: #cce2d8;
+}
+
+.dark-green-card {
+  background-color: #005a30;
+}
+
+.blue-card {
+  background-color: #5694CA;
+}
+
+.amber-card {
+  background-color: #ff8503;
+}
+
+.red-card {
+  background-color: govuk-colour("red");
+}
+
+.card-rating-child {
+  background-color: govuk-colour("red");
+  height: 100%;
+}
+
+.card-child-smallest-text:first-child {
+  margin: 0;
+  font-size: 0.8em;
+  font-weight: 400;
+  padding: 20px 20px 0px 20px;
+  color: govuk-colour("black");
+}
+
+.card-child-smallest-text {
+  margin: 0;
+  font-size: 0.8em;
+  font-weight: 400;
+  padding: 8px 20px 0px 20px;
+  color: govuk-colour("black");
+}
+
+.card-child-small-text {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: 400;
+  padding: 20px 20px 0px 20px;
+  color: govuk-colour("black");
+}
+
+.card-child-rating-small-text {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: 400;
+  padding: 0px 20px 20px 20px;
+  color: govuk-colour("white");
+}
+
+.card-child-large-text {
+  margin: 0;
+  font-size: 3em;
+  font-weight: 900;
+  padding: 0px 20px 0px 20px;
+  color: govuk-colour("black");
+}
+
+.card-child-rating-large-text {
+  margin: 0;
+  font-size: 3em;
+  font-weight: 900;
+  padding: 0px 20px 0px 20px;
+  color: govuk-colour("white");
+}
+
+
+.whiteText {
+  color: white;
+}
+
+.redBackground {
+  background-color: red;
+}
+
+.amberBackground {
+  background-color: #FEB204;
+}
+
+.greenBackground {
+  background-color: #28a197;
+}
+
+.govuk-table {
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: #0b0c0c;
+  width: 100%;
+  margin-bottom: 20px;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.graphImage {
+  background: url(../images/graph-complex.png) no-repeat center center fixed;
+  height: auto;
+}
