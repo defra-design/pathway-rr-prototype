@@ -1,0 +1,137 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Pathway search
+{% endblock %}
+
+
+
+{% block content %}
+{{ govukPhaseBanner({
+  tag: {
+    text: "alpha"
+  },
+  html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+}) }}
+
+{{ govukBackLink({
+  text: "Back",
+  href: "user-type"
+}) }}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    {{ govukErrorSummary({
+      titleText: "There is a problem",
+      errorList: [
+        {
+          text: "You must choose a country, host and format from the fields below",
+          href: "policy-search"
+        }
+      ]
+    }) }}
+
+    <h1 class="govuk-heading-xl">Policy Import Pathway Search</h1>
+    <form action="policy-calculate" method="post" class="form">
+      {{ govukSelect({
+          id: "country",
+          name: "country",
+          label: {
+          text: "Country of Import"
+          },
+          items: [
+            {
+              value: "Choose country",
+              text: "Choose country",
+              selected: true
+            },
+            {
+              value: "Argentina",
+              text: "Argentina"
+            },
+            {
+              value: "Canada",
+              text: "Canada"
+            },
+            {
+              value: "Netherlands",
+              text: "Netherlands"
+            },
+            {
+              value: "Norway",
+              text: "Norway"
+            }
+          ]
+        }) }}
+
+      {{ govukSelect({
+          id: "host",
+          name: "host",
+          label: {
+            text: "Host"
+          },
+          items: [
+            {
+              value: "Choose host",
+              text: "Choose host",
+              selected: true
+            },
+            {
+              value: "Dendrombium",
+              text: "Dendrombium"
+            },
+            {
+              value: "Pinus",
+              text: "Pinus"
+            },
+            {
+              value: "Solanum tuberosum",
+              text: "Solanum tuberosum"
+            },
+            {
+              value: "Vitis vinifera ssp. vinifera",
+              text: "Vitis vinifera ssp. vinifera"
+            }
+          ]
+        }) }}
+
+      {{ govukSelect({
+          id: "format",
+          name: "format",
+          label: {
+            text: "Format"
+          },
+          items: [
+            {
+              value: "Choose format",
+              text: "Choose format",
+              selected: true
+            },
+            {
+              value: "Bulbs or tubers",
+              text: "Bulbs or tubers"
+            },
+            {
+              value: "Cut flowers or branches",
+              text: "Cut flowers or branches"
+            },
+            {
+              value: "Fruits or vegetables",
+              text: "Fruits or vegetables"
+            },
+            {
+              value: "Plants for planting",
+              text: "Plants for planting"
+            }
+          ]
+        }) }}
+
+      {{ govukButton({
+          text: "Continue"
+        }) }}
+
+    </form>
+  </div>
+</div>
+
+{% endblock %}

@@ -35,8 +35,7 @@ Home – GOV.UK Prototype Kit
         classes: 'govuk-button--primary'
       }]
     }) }}
-    <h2 class="govuk-heading-m"><span class="govuk-!-font-weight-bold">Import country: {{ data['country'] }} &nbsp; | &nbsp;</span> <span class="govuk-!-font-weight-bold">Host: {{ data['host'] }}&nbsp; | &nbsp;</span><span
-        class="govuk-!-font-weight-bold">Format: {{ data['format'] }}</span></h2>
+    <h2 class="govuk-heading-m govuk-!-font-weight-regular">Import country: <span class="govuk-!-font-weight-bold">{{ data['country'] }}</span> &nbsp; | &nbsp;Host:  <span class="govuk-!-font-weight-bold">{{ data['host'] }}</span>&nbsp; | &nbsp;Format: <span class="govuk-!-font-weight-bold">{{ data['format'] }}</span></h2>
 
 
     {%- from "moj/components/sub-navigation/macro.njk" import mojSubNavigation -%}
@@ -74,7 +73,15 @@ Home – GOV.UK Prototype Kit
     {% endif %}
     
     {% if data['country'] == 'Netherlands' %}
-      <img src="/public/images/netherlandsw.png" style="width: 100%;" class="govuk-!-margin-bottom-6">
+      <img src="/public/images/netherlands.png" style="width: 100%;" class="govuk-!-margin-bottom-6">
+    {% endif %}
+    
+    {% if data['country'] == 'Argentina' %}
+      <img src="/public/images/argentina.png" style="width: 100%;" class="govuk-!-margin-bottom-6">
+    {% endif %}
+    
+    {% if data['country'] == 'Norway' %}
+      <img src="/public/images/norway.png" style="width: 100%;" class="govuk-!-margin-bottom-6">
     {% endif %}
 
 
