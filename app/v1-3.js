@@ -28,7 +28,7 @@ router.post("/policy-calculate", function (req, res) {
 	if (calculateCountry  && calculateHost && calculateFormat ) {
 		// Send user to next page
 		res.redirect("policy-results")
-	} else {
+	} else if (calculateCountry == " " || calculateHost == " " ||  calculateFormat == " " ) {
 		res.redirect("policy-search-error")
 	}
 })
