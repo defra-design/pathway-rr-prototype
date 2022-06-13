@@ -57,6 +57,26 @@ Ips typographus,5,5,25,4,4,16,,
 Leucaspis pini,5,2,10,5,2,10,,
 Monochamus urossovii,5,3,15,5,3,15,," %}
 
+{% set csv_china_ash = "Pest,Establishment,Impact,Establishment * Impact,Establishment,Impact,Establishment * Impact
+Acalolepta sejuncta,5,2,10,5,2,10
+Agrilus planipennis,5,5,25,5,5,25
+Anisandrus maiche,5,2,10,5,2,10
+Anoplophora glabripennis,5,4,20,4,3,12
+Corythucha ciliata,5,3,15,4,3,12
+Endoclita excrescens,5,4,20,5,4,20
+Erthesina fullo,5,2,10,5,2,10
+Euwallacea fornicatus,2,3,6,2,3,6
+Hylesinus cholodkovskyi,5,2,10,5,2,10
+Hylesinus eos,5,3,15,5,3,15
+Hylesinus laticollis,5,2,10,5,1,5
+Monochamus guttulatus,4,1,4,4,1,4
+Phenacoccus fraxinus,4,4,16,4,3,12
+Rusticoclytus rusticus,5,2,10,5,2,10
+Singhiella citrifolii,3,2,6,3,2,6
+Trichoferus campestris,4,3,12,4,3,12
+Xylosandrus crassiusculus,3,2,6,3,2,6
+Xylotrechus grayii,5,3,15,5,3,15" %}
+
 {% set csv_argentina_solanum = "Pest,Establishment,Impact,Establishment * Impact,Establishment,Impact,Establishment * Impact,,
 Andean potato latent virus,4,3,12,4,3,12,,
 Aphis spiraecola,4,2,8,4,2,8,,
@@ -127,6 +147,10 @@ Phenacoccus solani,5,3,15,4,3,12,," %}
 
 {% if data["country"] == "Netherlands" and data["format"] == "Cut flowers or branches" and data["host"] == "Dendrombium" %}
   {% set csv_selected = csv_netherlands_dendrombium %}
+{% endif %}
+
+{% if data["country"] == "China" and data["format"] == "Firewood" and data["host"] == "Fraxinus" %}
+  {% set csv_selected = csv_china_ash %}
 {% endif %}
 
 
