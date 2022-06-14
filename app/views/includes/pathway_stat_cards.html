@@ -122,3 +122,28 @@
   </div>
 </div>
 {% endif %}
+
+{% if data["country"] == "China" and data["format"] == "Firewood" and data["host"] == "Fraxinus" %}
+<div class="card-parent govuk-!-margin-bottom-6">
+  <div class="card-child">
+    <p class="card-child-small-text">Unmitigated risk rating</p>
+    <p class="card-child-large-text unmitigateStat govuk-!-margin-bottom-0">Low</p>
+    {% include "includes/unmitigated.html" %}
+  </div>
+  <div class="card-child">
+    <p class="card-child-small-text">Mitigated risk rating</p>
+    <p class="card-child-large-text mitigateStat govuk-!-margin-bottom-0">Very low</p>
+    {% include "includes/mitigated.html" %}
+  </div>
+  <div class="card-child">
+    <p class="card-child-small-text">Pathway score</p>
+    <p class="card-child-large-text numPestStat">482</p>
+  </div>
+  <div class="card-child">
+    <p class="card-child-smallest-text">Number of pests: 18</p>
+    <p class="card-child-smallest-text">Unmitigated score: 220</p>
+    <p class="card-child-smallest-text">Mitigated score: 200</p>
+    <p class="card-child-smallest-text">Format Risk: Low</p>
+  </div>
+</div>
+{% endif %}
